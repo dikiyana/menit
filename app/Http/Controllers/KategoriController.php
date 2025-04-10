@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use App\Kategori;
 
 class KategoriController extends Controller
 {
@@ -30,7 +31,8 @@ class KategoriController extends Controller
     }
 //show 
     public function show($id){
-        $kategori = DB::table('kategori')->where('id', $id)->first();
+        $kategori = Kategori::findOrFail($id);
+        // $kategori = DB::table('kategori')->where('id', $id)->first();
         return view('kategori.show', compact('kategori'));
     }
 //Update

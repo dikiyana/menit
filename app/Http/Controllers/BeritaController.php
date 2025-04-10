@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use DB;
 use App\Berita;
+use File;
 
 use Illuminate\Http\Request;
 
@@ -129,6 +130,7 @@ class BeritaController extends Controller
             $berita->kategori_id = $request->kategori_id;
         }
         $berita->update();
+        return redirect('/berita');
     }
 
     /**
@@ -141,6 +143,12 @@ class BeritaController extends Controller
 // delete
      public function destroy($id)
     {
-        //
+        $berita = berita::find($id);
+ 
+        $path   = "gambar/";
+        File::delete($path . $berita->thumbnails);
+        $berita->delete();
+
+        return redirect('/berita');
     }
 }

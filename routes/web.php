@@ -20,6 +20,7 @@ Route::get('/data-table', function(){
 });
 
 
+Route::middleware(['auth'])->group(function () {
 //CRUD Kategori
 Route::get('/kategori/create', 'KategoriController@create');
 Route::post('/kategori', 'KategoriController@store');
@@ -27,7 +28,18 @@ Route::get('/kategori', 'KategoriController@index');
 Route::get('/kategori/{kategori_id}', 'KategoriController@show');
 Route::get('/kategori/{kategori_id}/edit', 'KategoriController@edit');
 Route::put('/kategori/{kategori_id}', 'KategoriController@update');
-Route::delete('/kategori/{kategori_id}', 'KategoriController@destroy');
+Route::delete('/kategori/{kategori_id}', 'KategoriController@destroy');    
+
+Route::resource('profile', 'ProfileController')->only([
+    'index', 'update'
+]);
+Route::resource('komentar', 'KomentarController')->only([
+    'store'
+]);
+});
+
+
+
 
 //CRUD Berita
 Route::resource('/berita', 'BeritaController');
@@ -40,3 +52,6 @@ Route::get('/detil/{detil_id}', 'DetilController@show');
 Route::get('/detil/{detil_id}/edit', 'DetilController@edit');
 Route::put('/detil/{detil_id}', 'DetilController@update');
 Route::delete('/detil/{detil_id}', 'DetilController@destroy');
+Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
