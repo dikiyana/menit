@@ -1,10 +1,9 @@
-<p align="center">
-  <a href="https://laravel.com" target="_blank">
-    <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400">
-  </a>
-</p>
+![Homepage Screenshot](menit_ui.png)
+![ERD Diagram](menit_erd.png)
 
-<h2 align="center">📰 Detik News Portal</h2>
+
+
+<h2 align="center">📰 Menit News Portal</h2>
 
 This project is a **news portal web application** inspired by Detik.com, built using the Laravel framework. The application features a clean architecture for managing articles, categories, authors, and users, following Laravel's best practices.
 
