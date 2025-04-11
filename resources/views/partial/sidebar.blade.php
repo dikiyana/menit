@@ -115,7 +115,7 @@
           </li>
           @endauth
 
-          @guest
+          {{-- @guest
           <li class="nav-item" bg-primary>
             <a href="/login" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
@@ -123,7 +123,7 @@
             </a>
             
           </li>
-          @endguest
+          @endguest --}}
 
 
 
