@@ -1,6 +1,8 @@
+## 🖼️ User Interface (UI) Preview
 ![Homepage Screenshot](menit_ui.png)
-![ERD Diagram](menit_erd.png)
 
+## 📂 Entity Relationship Diagram (ERD)
+![ERD Diagram](menit_erd.png)
 
 
 <h2 align="center">📰 Menit News Portal</h2>
@@ -74,11 +76,6 @@ Visit [http://localhost:8000](http://localhost:8000) in your browser.
 
 ---
 
-## 📂 Entity Relationship Diagram (ERD)
-
-The ERD (Entity Relationship Diagram) is available in the `docs/` folder or project root. It outlines the relationships between users, articles, categories, and other core entities in the system.
-
----
 
 ## 📜 License
 
